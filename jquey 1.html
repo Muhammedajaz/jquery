@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        div {
+            height: 200px;
+            width: 200px;
+        }
+
+        #div1 {
+            background-color: aqua;
+            height: 200px;
+            width: 200px;
+        }
+
+        #div2 {
+            background-color: red;
+            height: 200px;
+            width: 200px;
+        }
+
+        #div3 {
+            background-color: blue;
+            height: 200px;
+            width: 200px;
+        }
+
+        #div4 {
+            background-color: black;
+            height: 200px;
+            width: 200px;
+        }
+
+        #div5 {
+            background-color: brown;
+            height: 200px;
+            width: 200px;
+            display: none;
+        }
+
+        #div6 {
+            background-color: chartreuse;
+            height: 200px;
+            width: 200px;
+        }
+
+        #div7 {
+            background-color: rgb(78, 12, 222);
+            height: 200px;
+            width: 200px;
+        }
+
+        #div8 {
+            background-color: rgb(233, 18, 165);
+            height: 200px;
+            width: 200px;
+            display: none;
+        }
+
+        #div9 {
+            background-color: coral;
+            height: 200px;
+            width: 200px;
+        }
+
+        #div10 {
+            background-color: greenyellow;
+            height: 200px;
+            width: 200px;
+            /* display: none; */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lorem ipsum dolor sit.</h1>
+    <p id="para1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error doloribus perspiciatis iure esse nulla illum
+        numquam, blanditiis distinctio maiores eius!
+    </p>
+
+    <h2 class="sub">Sub Heading</h2>
+
+    <p id="para2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, numquam dolores. Eum aut placeat
+        nisi harum
+        adipisci facilis sint culpa perspiciatis similique impedit aspernatur corrupti atque, voluptatum unde optio,
+        fuga laudantium ducimus, ratione animi distinctio voluptatem asperiores quasi amet. Laborum.</p>
+
+    <button id="hide">Hide</button>
+    <button id="show">show</button>
+    <button id="toggle">toggle</button>
+    <br>
+    <button id="div1"></button>
+    <button id="div2"></button>
+    <button id="div3"></button>
+    <br>
+
+    <!-- slide effects -->
+    <button id="slideDown">slide down</button>
+    <button id="slideUp">slide up</button>
+    <button id="slideToggle">slide toggle</button>
+    <br>
+    <button id="div4"></button>
+    <button id="div5"></button>
+    <button id="div6"></button>
+    <br>
+
+    <!-- fade effects -->
+    <button id="fadeIn">fade in</button>
+    <button id="fadeOut">fade out</button>
+    <button id="fadeToggle">fade toggle</button>
+    <button id="fadeTo">fade to</button>
+    <br>
+    <button id="div7"></button>
+    <button id="div8"></button>
+    <br>
+
+    <!-- animate -->
+    <button id="animate">animate</button>
+    <button id="delay">delay</button>
+    <br>
+    <button id="div9"></button>
+    <button id="div10"></button>
+
+
+    <script>
+        $(document).ready(function () {
+            $('h1').css('color', 'red')
+            $('p').css({
+                backgroundColor: 'yellow',
+                color: 'blue',
+                fontSize: '20px',
+                fontWeight: 'medium',
+
+            })
+
+            $('.sub').css({
+                color: 'red',
+                fontSize: '35px',
+                textDecoration: 'underline',
+            })
+
+            $('#para2').css({
+                backgroundColor: 'aqua',
+                color: 'blue',
+                fontSize: '20px',
+            })
+
+            $('.para1').dblclick(function () {
+                $(this).css({
+                    backgroundColor: 'blue',
+                    color: 'white',
+                    fontSize: '20px',
+                })
+            })
+
+            $('#hide').click(function () {
+                // $('this').hide()/
+                // $('#para1').hide()
+            })
+
+            $('#show').click(function () {
+                $('#para1').show()
+            })
+
+            $('#hide').click(function () {
+                $('#div1').hide()
+            })
+
+            $('#show').click(function () {
+                $('#div1').show()
+            })
+
+            $('#toggle').click(function () {
+                $('#div1').toggle()
+            })
+
+
+            // slide effects
+
+            $('#slideDown').click(function () {
+                $('#div5').slideDown()
+            })
+
+            $('#slideUp').click(function () {
+                $('#div5').slideUp()
+            })
+
+            $('#slideToggle').click(function () {
+                $('#div5').slideToggle()
+            })
+
+
+            // fade effects
+            $('#fadeIn').click(function () {
+                $('#div8').fadeIn()
+            })
+
+            $('#fadeOut').click(function () {
+                $('#div8').fadeOut()
+            })
+
+            $('#fadeToggle').click(function () {
+                $('#div8').fadeToggle()
+            })
+
+            $('#fadeTo').click(function () {
+                $('#div8').fadeTo(3000, 0.5)
+            })
+
+            // animate....delay
+
+            $('#animate').click(function () {
+                $('#div10').animate({
+                    left: '250px',
+                    opacity: '0.5',
+                    height: '150px',
+                    width: '150px',
+                })
+            })
+
+            $('#delay').click(function () {
+                $('#div10').delay('slow')
+            })
+
+
+
+
+
+
+        })
+    </script>
+</body>
+
+</html>

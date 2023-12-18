@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .element{
+            background-color: aqua;
+            border: 1px solid blue;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <h1 id="head">Heading</h1>
+    <p id="para">Hello</p>
+    <div class="funct">
+        Original content
+    </div>
+    <div class="funct">
+        Another Content
+    </div>
+    <div id="txt">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quo.</p>
+    </div>
+    <button id="change" onclick="changeContent()">Change Content</button>
+    <button id="remove">Remove</button>
+    <button id="empty">empty</button>
+
+
+
+    <script>
+        $(document).ready(function () {
+            $('#para').html('<b>This is a paragraph</b>');
+            const head = $('#head').html();
+            console.log(head);
+            const txt = $('#txt').text();
+            console.log(txt);
+            const htmltxt = ('#txt').html();
+            console.log(htmltxt);
+            $('#remove').click(function (){
+                $('#txt') .remove();
+            })
+
+        })
+            function generateNewContent(index, oldContent) {
+                return '<p>New content for element' + index + ':' + oldContent + '</p>'
+            }
+            function changeContent() {
+                $('.funct').html(generateNewContent)
+            }
+
+    </script>
+
+</body>
+
+</html>

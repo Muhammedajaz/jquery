@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div id="parent">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+        </ul>
+        <div class="child">
+            <p>this is child div</p>
+            <p>this is child div</p>
+            <p>this is child div</p>
+
+
+            
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            var parent = $('.child').parent();
+            parent.css('background-color', 'red');
+            
+            var children = $('#parent').children();
+            console.log(children);
+            children.css('color', 'aqua')
+
+            var firstChild = children[0]
+            $(firstChild).css('color', 'green')
+
+            var siblings = $('.child').siblings();
+            siblings.css('border', '4px solid blue');
+            console.log(siblings);
+
+           var first =  $('p').first();
+           first.css('background-color','grey')
+           console.log(first);
+
+           var last = $('p').last();
+           last.css('background-color','blue')
+           console.log(last);
+
+           var selectindex = $('p').eq(2);
+           selectindex.css('border','5px solid black')
+
+        })
+    </script>
+</body>
+
+</html>
